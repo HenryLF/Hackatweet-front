@@ -9,7 +9,7 @@ export async function fetchTrends() {
 }
 
 export async function fetchHashtags(...hashtags){
-    return fetch(BACK_URL + `/${hashtags}`)
+    return fetch(BACK_URL + `/${hashtags.flat().join(",")}`)
 }  
 
 export async function likeTweet(tweetID, token) {
