@@ -1,4 +1,4 @@
-export const BACK_URL = "http://localhost:3000";
+export const BACK_URL = "https://hackatweet-back-git-main-henrylfs-projects.vercel.app";
 
 export const headers = {
   Accept: "*/*",
