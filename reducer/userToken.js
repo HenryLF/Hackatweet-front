@@ -12,6 +12,7 @@ export const signUp = createAsyncThunk(
   "signUp",
   async ({ username, password }, thunkAPI) => {
     let jsonData = await requestSignUp(username, password);
+    console.log(jsonData)
     if (jsonData.result) {
       return jsonData.data;
     }
@@ -22,11 +23,12 @@ export const signUp = createAsyncThunk(
 export const signIn = createAsyncThunk(
   "signIn",
   async ({ username, password }, thunkAPI) => {
-    let jsonData = requestSignIn({ username, password });
+    let jsonData = await requestSignIn( username, password );
+    console.log(jsonData)
     if (jsonData.result) {
       return jsonData.data;
     }
-    return thunkAPI.rejectWithValue(jsonData);
+    return thunkAPI.rejectWithValue(jsonData.message);
   }
 );
 
@@ -43,7 +45,7 @@ const userToken = createReducer(initialState, (build) => {
       state.value = action.payload;
     })
     .addCase(signIn.rejected, (_, action) => {
-      state.value = action.payload;
+        window.alert(action.payload);
     });
 });
 
