@@ -8,9 +8,10 @@ export async function fetchTrends() {
   return fetch(BACK_URL + "tweets/trends").then((r) => r.json(), { headers });
 }
 
-export async function fetchHashtags(...hashtags){
-    return fetch(BACK_URL + `/${hashtags.flat().join(",")}`)
-}  
+export async function fetchHashtags(...hashtags) {
+  return fetch(BACK_URL + `/${hashtags.flat().join(",")}`);
+}
+
 
 export async function likeTweet(tweetID, token) {
   return fetch(BACK_URL + "/tweets/like", {
@@ -37,10 +38,9 @@ export async function deleteTweet({ tweetID, token }) {
 }
 
 export async function postTweet({ content, token }) {
-    return fetch(BACK_URL + "/tweets/new", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({ content, token }),
-    }).then((r) => r.json());
+  return fetch(BACK_URL + "/tweets/new", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ content, token }),
+  }).then((r) => r.json());
 }
-  

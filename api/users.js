@@ -15,3 +15,19 @@ export async function requestSignIn(username, password) {
     body: JSON.stringify({ username, password }),
   }).then((r) => r.json());
 }
+
+export async function requestNewToken(token) {
+  return fetch(BACK_URL + "/users/renew", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ token }),
+  }).then((r) => r.json());
+}
+
+export async function validateToken(token) {
+  return fetch(BACK_URL + "/users/validate", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ token }),
+  }).then((r) => r.json());
+}

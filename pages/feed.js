@@ -1,10 +1,9 @@
-import Home from "../components/Home";
+import Feed from "../components/Feed";
 
 function Index() {
   return (
     <>
-      <Home />
-      <Home />;
+      <Feed />
     </>
   );
 }

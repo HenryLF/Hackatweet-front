@@ -3,7 +3,7 @@ import {
   createAsyncThunk,
   createReducer,
 } from "@reduxjs/toolkit";
-import { requestSignIn, requestSignUp } from "../api/users";
+import { requestNewToken, requestSignIn, requestSignUp } from "../api/users";
 
 const initialState = {
   value: {
@@ -36,6 +36,18 @@ export const signIn = createAsyncThunk(
   }
 );
 
+export const refreshToken = createAsyncThunk(
+  "user/renew",
+  async ({ token }, thunkAPI) => {
+    let jsonData = await requestNewToken(token);
+    console.log(jsonData);
+    if (jsonData.result) {
+      return jsonData.data;
+    }
+    return thunkAPI.rejectWithValue(jsonData.message);
+  }
+);
+
 const logOut = createAction("user/logout");
 
 const userToken = createReducer(initialState, (build) => {
@@ -51,10 +63,17 @@ const userToken = createReducer(initialState, (build) => {
       window.alert(action.payload);
     })
     .addCase(signIn.fulfilled, (state, action) => {
+      console.log(action.payload);
       state.value = action.payload;
     })
     .addCase(signIn.rejected, (_, action) => {
       window.alert(action.payload);
+    })
+    .addCase(refreshToken.fulfilled, (state, action) => {
+      state.value = action.payload;
+    })
+    .addCase(refreshToken.rejected, (state, _) => {
+      state.value = initialState;
     });
 });
 
