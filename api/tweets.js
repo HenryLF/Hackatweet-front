@@ -5,11 +5,11 @@ export async function fetchTweets() {
 }
 
 export async function fetchTrends() {
-  return fetch(BACK_URL + "tweets/trends").then((r) => r.json(), { headers });
+  return fetch(BACK_URL + "/tweets/trends").then((r) => r.json(), { headers });
 }
 
 export async function fetchHashtags(...hashtags) {
-  return fetch(BACK_URL + `/${hashtags.flat().join(",")}`);
+  return fetch(BACK_URL + `/hash/${hashtags.flat().join(",")}`);
 }
 
 

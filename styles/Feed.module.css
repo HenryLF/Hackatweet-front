@@ -5,13 +5,16 @@
   height: 100vh;
 }
 
-.pannel,
-.feed,
-.trends {
+.pannel,.feed,.trend{
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .pannel{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.feed{
+  overflow-y: scroll;
 }
