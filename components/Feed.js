@@ -61,13 +61,13 @@ export default function Feed() {
   return (
     <main className={styles.main}>
       <div className={styles.pannel}>
-        <div style={{display:"flex" , justifyContent : "center", marginTop : "5rem"}}>
-          <Image
-            src="/logoX.png"
-            height={150}
-            width={150}
-            alt="logo"
-          />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "5rem",
+          }}>
+          <Image src="/logoX.png" height={150} width={150} alt="logo" />
         </div>
         <div className={styles.usercard}>
           <UserSection username={username} />

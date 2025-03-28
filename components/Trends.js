@@ -18,8 +18,9 @@ export default function Trends() {
     };
   }, []);
   const trends = trendList.map((trend, id) => (
-    <div key={id} className={styles.trend}>
-      {trend.hashtag} {trend.count}
+    <div key={id} className={`${styles.trend} ${styles.block}`}>
+      <span className={styles.hashtag}>{trend.hashtag}</span>
+      <span className={styles.count}>{trend.count}</span>
     </div>
   ));
   console.log(trends);

@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Mont-Heavy';
+    src: url('../fonts/montheavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.main {
+    display: flex;
+    flex-direction: column; /* Organiser les blocs les uns sous les autres */
+    gap: 10px; /* Espacement entre les blocs */
+  }
+  
+  .trend {
+    display: flex; /* Utiliser flexbox pour aligner les éléments en ligne */
+    justify-content: space-between; /* Assure que le hashtag et le count sont séparés */
+    align-items: center; /* Centrer verticalement les éléments dans le bloc */
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .block {
+    width: 150px; /* Largeur fixe du bloc */
+    height: 40px; /* Hauteur fixe du bloc */
+    background-color: var(--color-purple); /* Fond bleu clair */
+    border: 2px solid var(--color-purple);; /* Bordure autour du bloc */
+    border-radius: 10px; /* Coins arrondis */
+    display: flex;
+    justify-content: space-between; /* Centrer le contenu verticalement */
+    text-align: center; /* Centrer le texte à l'intérieur du bloc */
+  }
+  
+  .hashtag {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .count {
+    font-size: 16px;
+    color: #555;
+  }
+  
