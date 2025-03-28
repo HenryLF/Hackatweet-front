@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import styles from "../styles/LoginForm.module.css";
+import Button from "./Button";
 
-export default function LoginForm({ submitTo, visible }) {
+export default function LoginForm({ submitTo, visible, close }) {
   const usernameInput = useRef(null);
   const passwordInput = useRef(null);
 
@@ -11,20 +12,20 @@ export default function LoginForm({ submitTo, visible }) {
       password: passwordInput.current.value,
     });
   }
-
   return (
     <div className={styles.main} style={{ display: visible ? "flex" : "none" }}>
+      <div className={styles.close} onClick={close}>
+        X
+      </div>
       <input ref={usernameInput} type="text" className={styles.input}></input>
       <input
         ref={passwordInput}
         type="password"
-        className={styles.input}></input>
-      <button type="submit" onClick={submitHandle}>
-        {" "}
-        //METTRE UN B a button, verifier si les deux input et password verifie
-        la regex envoyé par Baptiste, mettre en rouge ou mettre un message
-        d'info "manque qulque chose." Submit
-      </button>
+        className={styles.input}
+      ></input>
+      <Button type="submit" className={styles.button} onClick={submitHandle}>
+        Submit
+      </Button>
     </div>
   );
 }

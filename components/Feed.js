@@ -1,14 +1,16 @@
-import { validateToken } from "../api/users";
-import { useSelector, useDispatch } from "react-redux";
 import styles from "../styles/Feed.module.css";
+
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+
 import { logOut, refreshToken } from "../reducer/user";
+import { validateToken } from "../api/users";
+import { fetchTweets } from "../api/tweets";
+
 import Image from "next/image";
 import UserSection from "./UserSection";
 import Button from "./Button";
 import TweetEditor from "./TweetEditor";
-import { fetchTweets } from "../api/tweets";
-import { ReducerType } from "@reduxjs/toolkit";
 import Tweet from "./Tweet";
 import Trends from "./Trends";
 
@@ -71,7 +73,7 @@ export default function Feed() {
       </div>
       <div className={styles.trends} style={{ backgroundColor: "green" }}>
         <h2>Trends</h2>
-        <Trends/>
+        <Trends />
       </div>
     </main>
   );
