@@ -1,0 +1,6 @@
+//Régle font-face à déclarer dans le fichier CSS
+@font-face {
+    font-family: 'Mont-Heavy';
+    src: url('../fonts/nom_de_la_police.otf') format('opentype');
+}
+//
