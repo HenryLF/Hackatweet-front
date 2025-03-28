@@ -15,12 +15,18 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-    
+
+  --color-purple: #351e29;
+  --color-magenta: #a13d63;
+  --color-blue: #b7d5d4;
+  --color-text-light: #ffe4f3;
+  --color-text-deep: #312e30;
+  --color-gray: #595758;
 }
 
 * {
   box-sizing: border-box;
-  color: white;
+  color: var(--color-text-light);
 }
 
 .logo {
@@ -28,21 +34,20 @@ body {
   max-width: 50px;
 }
 
-
-.h1{
+.h1 {
   font-size: 40px;
-  color : white;
+  color: white;
   font-weight: bold;
 }
 
-.h2{
+.h2 {
   font-size: 20px;
-  color : white;
+  color: white;
   font-weight: bold;
 }
 
-.h3{
+.h3 {
   font-size: 12px;
-  color : white;
+  color: white;
   font-weight: bold;
 }
