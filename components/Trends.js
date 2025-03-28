@@ -23,7 +23,6 @@ export default function Trends() {
       <span className={styles.count}>{trend.count}</span>
     </div>
   ));
-  console.log(trends);
 
   return <div className={styles.main}>{trends}</div>;
 }

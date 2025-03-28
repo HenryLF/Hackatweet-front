@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  locales: ["en-US"],
 };
 
 module.exports = nextConfig;
