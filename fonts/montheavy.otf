@@ -1,0 +1,8 @@
+//Régle font-face à déclarer dans le fichier CSS
+
+@font-face {
+  font-family: 'Mont-Heavy';
+  src: url('/path/to/fonts/Mont-Heavy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

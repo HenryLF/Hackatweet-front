@@ -60,7 +60,7 @@ export default function Feed() {
   const tweets = tweetList.map((data, i) => <Tweet key={i} data={data} />);
   return (
     <main className={styles.main}>
-      <div className={styles.pannel} style={{ backgroundColor: "red" }}>
+      <div className={styles.pannel}>
         <Image src="/logoX.png" height={100} width={100} alt="logo" />
         <div className={styles.pannel}>
           <UserSection username={username} />

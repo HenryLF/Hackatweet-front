@@ -3,6 +3,7 @@
   grid-template-columns: 2fr 5fr 3fr;
   grid-template-rows: 1fr;
   height: 100vh;
+  background-color: var(--color-purple);
 }
 
 .pannel,.feed,.trend{

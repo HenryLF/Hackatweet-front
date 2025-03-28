@@ -1,0 +1,33 @@
+/* // dissocier nbr et mot + changer la police */
+/* styliser le tout, marge, couleur, taille etc */
+
+@font-face {
+    font-family: 'Mont-Heavy';
+    src: url('../fonts/montheavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.main {
+    padding: 20px;
+  }
+  
+  .trend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .hashtag {
+    font-family: "Mont-Heavy";
+    font-weight: bold;
+    color: white;
+    margin-right: 8px;
+    font-size: 1.2em;
+  }
+  
+  .count {
+    color: #888;
+    font-size: 1.1em; 
+  }
+  
