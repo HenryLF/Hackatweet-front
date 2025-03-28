@@ -18,7 +18,7 @@ export default function Trends() {
     };
   }, []);
   const trends = trendList.map((trend, id) => (
-    <div key={id} className={styles.trend}>
+    <div key={id} className={`${styles.trend} ${styles.block}`}>
       <span className={styles.hashtag}>{trend.hashtag}</span>
       <span className={styles.count}>{trend.count}</span>
     </div>
@@ -27,5 +27,3 @@ export default function Trends() {
 
   return <div className={styles.main}>{trends}</div>;
 }
-// styliser la div contenant trand hashtag et trend count
-// style main elle contient tout le bloc
