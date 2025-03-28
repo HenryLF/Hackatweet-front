@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Trends.module.css";
 import { fetchTrends } from "../api/tweets";
 
-const UPDATE_TRENDS_DELAY = 3_000; // 20 sec
+const UPDATE_TRENDS_DELAY = 20_000; // 20 sec
 
 export default function Trends() {
   const [trendList, setTrendList] = useState([]);
