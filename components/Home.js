@@ -18,7 +18,10 @@ function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <Button onClick={() => setSignUpVisible(!signUpVisible)}>
+        <Button
+          onClick={() => setSignUpVisible(!signUpVisible)}
+          className={styles.btn}
+        >
           Sign Up
         </Button>
         <LoginForm

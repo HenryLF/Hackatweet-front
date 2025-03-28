@@ -1,33 +1,16 @@
 import Image from "next/image";
 import styles from "../styles/UserSection.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { logOut } from "../reducer/user";
-import Button from "./Button";
+import ProfilePicture from "./ProfilePicture";
 
-export default function UserSection() {
-  const username = useSelector((state) => state.user.value.username);
-  const dispatch = useDispatch();
-
-  function logOutHandle() {
-    dispatch(logOut());
-    window.location.assign("/")
-  }
+export default function UserSection({ username }) {
   return (
     <div className={styles.main}>
-      <div className={styles.container}>
-        <Image
-          src="/profile.png"
-          width={100}
-          height={100}
-          alt="profile picture"
-          className={styles.profile}
-        />
-        <div>
-          <h3 className={styles.username}>{username}</h3>
-          <p className={styles.handle}> @{username} </p>
-        </div>
+      
+      <ProfilePicture/>
+      <div>
+        <h3 className={styles.username}>{username}</h3>
+        <span className={styles.handle}> @{username} </span>
       </div>
-      <Button onClick={logOutHandle}>Logout</Button>
     </div>
   );
 }

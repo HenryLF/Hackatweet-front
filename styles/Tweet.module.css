@@ -1,0 +1,18 @@
+.main {
+  width: 100%;
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: space-around;
+  width : 30%
+}
+
+.tweetContent {
+  word-wrap: break-word;
+}
