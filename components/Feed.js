@@ -60,18 +60,27 @@ export default function Feed() {
   const tweets = tweetList.map((data, i) => <Tweet key={i} data={data} />);
   return (
     <main className={styles.main}>
-      <div className={styles.pannel} style={{ backgroundColor: "red" }}>
-        <Image src="/logoX.png" height={100} width={100} alt="logo" />
-        <div className={styles.pannel}>
+      <div className={styles.pannel}>
+        <div style={{display:"flex" , justifyContent : "center", marginTop : "5rem"}}>
+          <Image
+            src="/logoX.png"
+            height={150}
+            width={150}
+            alt="logo"
+          />
+        </div>
+        <div className={styles.usercard}>
           <UserSection username={username} />
-          <Button onClick={logOutHandle}> Logout</Button>
+          <Button className={styles.logout} onClick={logOutHandle}>
+            Logout
+          </Button>
         </div>
       </div>
-      <div className={styles.feed} style={{ backgroundColor: "blue" }}>
+      <div className={styles.feed}>
         <TweetEditor token={token}></TweetEditor>
         <div className={styles.tweetContainer}>{tweets}</div>
       </div>
-      <div className={styles.trends} style={{ backgroundColor: "green" }}>
+      <div className={styles.trends}>
         <h2>Trends</h2>
         <Trends />
       </div>

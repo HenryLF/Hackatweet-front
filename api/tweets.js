@@ -29,7 +29,7 @@ export async function unLikeTweet(tweetID, token) {
   }).then((r) => r.json());
 }
 
-export async function deleteTweet({ tweetID, token }) {
+export async function deleteTweet(tweetID, token ) {
   return fetch(BACK_URL + "/tweets/delete", {
     method: "POST",
     headers,
