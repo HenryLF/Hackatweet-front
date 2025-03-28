@@ -12,6 +12,8 @@ const initialState = {
   },
 };
 
+export const logOut = createAction("user/logout");
+
 export const signUp = createAsyncThunk(
   "user/signUp",
   async ({ username, password }, thunkAPI) => {
@@ -47,8 +49,6 @@ export const refreshToken = createAsyncThunk(
     return thunkAPI.rejectWithValue(jsonData.message);
   }
 );
-
-const logOut = createAction("user/logout");
 
 const userToken = createReducer(initialState, (build) => {
   build

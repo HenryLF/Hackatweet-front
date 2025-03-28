@@ -1,0 +1,12 @@
+.main,.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+.profile{
+    
+}
