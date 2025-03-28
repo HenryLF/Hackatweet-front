@@ -1,5 +1,8 @@
-.button {
-  border: 1px solid red;
-  border-radius: 2rem;
-  
+.button{
+  font-weight: bold;
+  border-radius: 5rem;
+  color: white; /* Couleur du texte */
+    padding: 20px, 30px;
 }
+
+
