@@ -5,8 +5,11 @@ import { postTweet } from "../api/tweets";
 
 export default function TweetEditor({ token }) {
   const [tweetText, setTweetText] = useState("");
+  const tweetContent = useRef(null);
   function clickHandle() {
     postTweet({ token, content: tweetText });
+    tweetContent.current.value = "";
+    setTweetText("");
   }
   async function changeHandle(event) {
     event.target.value = event.target.value.slice(0, 280);
@@ -15,15 +18,15 @@ export default function TweetEditor({ token }) {
 
   return (
     <div className={styles.main}>
-      <h1>Home</h1>
+      <h1 className={styles.title}>Home</h1>
       <textarea
         className={styles.textarea}
         onChange={changeHandle}
-        placeholder={tweetText}
+        ref={tweetContent}
       ></textarea>
       <div className={styles.container}>
         <span className={styles.count}>{tweetText.length}/280</span>
-        <Button type="tweet" onClick={clickHandle}>
+        <Button type="tweet" className={styles.publish} onClick={clickHandle}>
           Tweet
         </Button>
       </div>

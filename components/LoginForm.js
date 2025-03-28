@@ -2,7 +2,7 @@ import { useRef } from "react";
 import styles from "../styles/LoginForm.module.css";
 import Button from "./Button";
 
-export default function LoginForm({ submitTo, visible, close }) {
+export default function LoginForm({ submitTo, children, visible, close }) {
   const usernameInput = useRef(null);
   const passwordInput = useRef(null);
 
@@ -24,7 +24,7 @@ export default function LoginForm({ submitTo, visible, close }) {
         className={styles.input}
       ></input>
       <Button type="submit" className={styles.button} onClick={submitHandle}>
-        Submit
+        {children}
       </Button>
     </div>
   );

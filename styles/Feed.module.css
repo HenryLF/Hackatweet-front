@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-columns: 2fr 5fr 3fr;
+  grid-template-columns: 2fr 6fr 3fr;
   grid-template-rows: 1fr;
   height: 100vh;
   background-color: var(--color-purple);
@@ -10,12 +10,33 @@
   width: 100%;
   overflow-x: hidden;
 }
-
+.usercard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
 .pannel{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 1px solid var(--color-text-light);
 }
 .feed{
+  display: flex;
   overflow-y: scroll;
+  flex-direction: column;
+ }
+.trends{
+  border-left: 1px solid var(--color-text-light);
+}
+
+.logout{
+  background-color: var(--color-blue);
+  color: var(--color-text-deep);
+  font-size: 1rem;
+}
+
+.publish{
+  background-color: var(--color-magenta);
 }

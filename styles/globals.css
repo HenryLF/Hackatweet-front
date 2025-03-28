@@ -15,10 +15,10 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-
+  font-weight: 800;
   --color-purple: #351e29;
   --color-magenta: #a13d63;
-  --color-blue: #b7d5d4;
+  --color-blue: #488286;
   --color-text-light: #ffe4f3;
   --color-text-deep: #312e30;
   --color-gray: #595758;
