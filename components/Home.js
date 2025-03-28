@@ -46,12 +46,12 @@ function Home() {
         submitTo={(form) => dispatch(signUp(form))}
         close={() => setSignUpVisible(false)}
         visible={signUpVisible}
-      />
+      >Sign Up</LoginForm>
       <LoginForm
         submitTo={(form) => dispatch(signIn(form))}
         close={() => setSignInVisible(false)}
         visible={signInVisible}
-      />
+      >Sign In</LoginForm>
     </main>
   );
 }

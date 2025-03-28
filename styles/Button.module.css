@@ -6,3 +6,6 @@
   border: 2px solid var(--color-gray);
   padding: 1rem 2rem ;
 }
+.button:hover{
+  opacity: .6;
+}

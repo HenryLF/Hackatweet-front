@@ -7,17 +7,17 @@
   align-items: center;
 }
 
-.close{
+.close {
   background-color: var(--color-text-light);
   color: var(--color-text-deep);
   font-size: 2rem;
   padding: 1rem;
   border-radius: 1rem;
-  transition: 0.5s .1s;
+  transition: 0.5s 0.1s;
   align-self: flex-end;
 }
-.close:hover{
-  opacity: .6;
+.close:hover {
+  opacity: 0.6;
 }
 
 .input {
@@ -25,6 +25,20 @@
   border-radius: 1rem;
   width: 90%;
   height: 3rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 }
 
 .button {
