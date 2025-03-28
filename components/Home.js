@@ -17,18 +17,24 @@ function Home() {
 
   return (
     <main className={styles.main}>
+      <img src="./logoX.png" alt="logo du site" />
+      <h1>See what's happening</h1>
+      <h2> Join Hackatweet today. </h2>
       <div className={styles.container}>
         <Button
           onClick={() => setSignUpVisible(!signUpVisible)}
-          className={styles.btn}
-        >
+          className={styles.buttonSignUP}>
           Sign Up
         </Button>
         <LoginForm
           submitTo={(form) => dispatch(signUp(form))}
           visible={signUpVisible}
         />
-        <Button onClick={() => setSignInVisible(!signInVisible)}>
+        <h3>Already have an account?</h3>
+
+        <Button
+          onClick={() => setSignInVisible(!signInVisible)}
+          className={styles.buttonSignIN}>
           Sign In
         </Button>
         <LoginForm
